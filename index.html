@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Webpage</title>
+    <title>My Styled Webpage</title>
+    <style>
+        /* This is the CSS section */
+        body {
+            background-color: #f0f4f8; /* A light blue-grey background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Update: My Coding Journey!</h1>
-    <p>This is my very first website built using GitHub Pages. I am learning how to structure content using HTML and host it for the world to see!</p>
+    <div class="container">
+        <h1>Welcome to Our Coding Class</h1>
+        <p>This website looks a lot better now! I've added a background color, centered the content, and used a cleaner font using CSS.</p>
+    </div>
 
 </body>
 </html>
