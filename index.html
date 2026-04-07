@@ -7,7 +7,7 @@
     <style>
         /* CSS: This part handles the "Look" */
         body {
-            background-color: #f0f4f8; /* Light blue-grey background */
+            background-color: #f0f4f8; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             display: flex;
@@ -40,12 +40,29 @@
         }
 
         .profile-image {
-            width: 100%;       /* Fills the container width */
-            max-width: 400px;  /* Stops it from getting too big */
-            height: auto;      /* Keeps the proportions correct */
+            width: 100%;       
+            max-width: 400px;  
+            height: auto;      
             border-radius: 8px;
             margin-top: 20px;
-            border: 5px solid #f0f4f8; /* Adds a nice little border around the photo */
+            border: 5px solid #f0f4f8; 
+        }
+
+        /* Styling for your new link */
+        .favorite-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .favorite-link:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
@@ -60,7 +77,13 @@
             style it with CSS, and host it for the world to see.
         </p>
 
-        <img src="download.jpeg" alt="six seven kid" class="profile-image">
+        <img src="my-photo.jpg" alt="A beautiful landscape for my demo page" class="profile-image">
+
+        <p>Want to see more?</p>
+        
+        <a href="https://six-seven.net/" target="_blank" class="favorite-link">
+            Visit my favorite site!
+        </a>
     </div>
 
 </body>
