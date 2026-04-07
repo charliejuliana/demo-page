@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Styled Website</title>
     <style>
-        /* CSS: This part handles the "Look" */
+        /* 1. Root Variables - A pro trick to manage colors in one place! */
+        :root {
+            --bg-color: #f0f4f8;
+            --card-bg: #ffffff;
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --text-grey: #5a67d8; /* Slightly more colorful grey */
+        }
+
         body {
-            background-color: #f0f4f8; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             color: #333;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
@@ -20,55 +27,67 @@
         }
 
         .container {
-            background-color: white;
+            background-color: var(--card-bg);
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            border-radius: 20px; /* Slightly rounder for a friendlier look */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            max-width: 450px;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Subtle animation when someone lands on your page */
+        .container:hover {
+            transform: translateY(-5px);
         }
 
         h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
         }
 
         p {
-            line-height: 1.6;
-            font-size: 1.1rem;
-            color: #555;
+            line-height: 1.8; /* More space between lines for readability */
+            font-size: 1.05rem;
+            color: #4a5568;
+            margin-bottom: 20px;
         }
 
         .profile-image {
-            width: 100%;       
-            max-width: 400px;  
-            height: auto;      
-            border-radius: 8px;
-            margin-top: 20px;
-            border: 5px solid #f0f4f8; 
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+            margin: 10px 0 25px 0;
+            border: 4px solid var(--bg-color);
         }
 
-        /* Styling for your new link */
         .favorite-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
+            padding: 12px 28px;
+            background-color: var(--primary-blue);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
 
         .favorite-link:hover {
             background-color: #2980b9;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Adds a "pressed" effect when clicked */
+        .favorite-link:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <main class="container">
         <h1>Welcome to Our Coding Class</h1>
         
         <p>
@@ -79,12 +98,12 @@
 
         <img src="download.jpeg" alt="six seven kid" class="profile-image">
 
-        <p>Want to see more?</p>
+        <p>Ready to explore more?</p>
         
         <a href="https://six-seven.net/" target="_blank" class="favorite-link">
-            Visit my favorite site!
+            Visit My Favorite Site
         </a>
-    </div>
+    </main>
 
 </body>
 </html>
